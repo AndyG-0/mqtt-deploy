@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                     echo 'Deploying using helm...'
-                    sh 'export KUBECONFIG=/var/lib/jenkins/config && helm delete -n default mqtt-stable && sleep 10 &&  helm upgrade --install mqtt-stable halkeye/mosquitto --version 0.2.0'
+                    sh 'export KUBECONFIG=/var/lib/jenkins/config && helm upgrade --install mqtt-stable halkeye/mosquitto --version 0.2.0'
             }
         }
     }
